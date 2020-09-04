@@ -45,6 +45,7 @@
 .diy-title-main{
     font-size: 1.2em;
     float: left;
+    outline: none;
 }
 
 /* 内容主体*/

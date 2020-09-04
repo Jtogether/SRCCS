@@ -116,9 +116,9 @@ body {
 }
 
 .userimg {
-    width:160px;
-    height:160px;
-    background-image: url(../img/touxiang.png);
+    width:6em;
+    height:6em;
+    background: url(../img/touxiang.png) no-repeat;
     background-size: cover;
 }
 .username {
