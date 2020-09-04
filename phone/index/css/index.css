@@ -83,7 +83,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-    border-radius: 1;
+    border-radius: 1em;
     background-color: transparent;
     opacity: 1;
 	font-size:1.3em;
