@@ -1,0 +1,15 @@
+/* 渐变按钮，长条，带点击效果 */
+.button-style-login{
+	height: 2.3em;
+	width: 21em;
+	margin-top: 0.9em;
+	border-radius: 1.3rem;
+	border: none;
+	background-image: linear-gradient(to right, rgb(80,163,253), rgb(0,226,250));
+	font-size: .65em;
+	color: white;
+	outline: none;
+}
+.button-style-login:active{
+	background-image: linear-gradient(to right, rgb(100,149,237), rgb(100,226,250));
+}
