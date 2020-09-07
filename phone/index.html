@@ -137,135 +137,129 @@
         <script src="./assets/mvvm/index.js"></script>
         <script src="./js/index.js"></script>
         <script src="index/js/swiper-bundle.min.js"></script>
-		<script src="main/js/main.js"></script>
+        <script src="main/js/main.js"></script>
+        <script src="js/appcan.listview.js"></script>
 		
         <script>
 
-var json = [
-{
-"name": "主页",
-"url": "fa fa-home"
-},
-{
-"name": "消息",
-"url": "fa fa-comment"
-},
-{
-"name": "报表",
-"url": "fa fa-align-justify"
-},
-{
-"name": "个人",
-"url": "fa fa-users"
-}
-]
-var swiper = new Swiper('.swiper-container', {
-pagination: {
-el: '.swiper-pagination',
-clickable: true,
-renderBullet: function (index, className) {
-// return '<span class="' + className + '">' + (index + 1) + '</span>';
-return '<div class="menu ' + className + '"> <i class="'+json[index].url+'" aria-hidden="true"></i> <div class="text">' + json[index].name + '</div></div>';
-},
-},
-});
-        </script>
-        <script>
+            var json = [
+            {
+                "name": "主页",
+                "url": "fa fa-home"
+            },{
+                "name": "消息",
+                "url": "fa fa-comment"
+            },{
+                "name": "报表",
+                "url": "fa fa-align-justify"
+            },{
+                "name": "个人",
+                "url": "fa fa-users"
+            }]
+
+            var swiper = new Swiper('.swiper-container', {pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                // return '<span class="' + className + '">' + (index + 1) + '</span>';
+                return '<div class="menu ' + className + '"> <i class="'+json[index].url+'" aria-hidden="true"></i> <div class="text">' + json[index].name + '</div></div>';
+                },
+            },});
+        
             appcan.button(".nav-btn", "btn-act", function() {
                 appcan.window.close(-1);
             })
+       
+
+            var lv = appcan.listview({
+                selector : "#listview",
+                type : "thinLine",
+                hasIcon : true,
+                hasAngle : true,
+                hasSubTitle : true,
+                multiLine : 1,
+            });
+            lv.set([{
+                title : "新消息通知",
+                icon:"./css/res/icon-message-act.png",
+                id:"1"
+            }, {
+                title : "基本信息",
+                icon:"./css/res/icon-edit-act.png",
+                id:"2"
+            }, {
+                title : "我的二维码",
+                icon:"./css/res/icon-erweima-act.png",
+                id:"3"
+            }, {
+                title : "设置",
+                icon:"./css/res/icon-setting-act.png",
+                id:"4"
+            }, {
+                title : "关于",
+                icon:"./css/res/icon-warn-act.png",
+                id:"5"
+            },{
+                title : "退出登录",
+                icon:"./css/res/icon-close-act.png",
+                id:"5"
+            }])
+            lv.on("click",function(ele,obj,curEle){
+            })
+ 
+            var lv = appcan.listview({
+                selector : "#local",
+                type : "thickLine",
+                hasIcon : true,
+                hasAngle : false,
+                hasSubTitle : true,
+                multiLine : 1,
+            });
+
+            var json2 =[{
+                    title : "登陆",
+                    describe:"第二条消息",
+                    icon:"index/img/img01.jpeg",
+                    id:"test"
+                },{
+                    title : "主页",
+                    describe:"第一条记录",
+                    icon:"./index/img/img02.jpeg",
+                    id:"test"
+                },{
+                    title : "消息3",
+                    describe:"内容",
+                    icon:"./index/img/img03.jpeg",
+                    id:"3"
+                },{
+                    title : "消息4",
+                    describe:"内容",
+                    icon:"./index/img/img04.jpeg",
+                    id:"4"
+                },{
+                    title : "消息5",
+                    describe:"内容",
+                    icon:"./index/img/img05.jpeg",
+                    id:"5"
+                },{
+                    title : "消息6",
+                    describe:"内容",
+                    icon:"./index/img/img06.jpeg",
+                    id:"6"
+                }]
+                lv.set(json2)
+                
+                lv.on("click",function(ele,obj,curEle){
+                    localStorage.setItem("yemian",obj.note);
+                    var id =obj.id;
+                    appcan.window.open({
+                        name:id,
+                        data:id+'.html',
+                        aniId:10
+                    });
+                })
+      
         </script>
-   <script src="js/appcan.listview.js"></script>    
-   <script>
-        var lv = appcan.listview({
-        selector : "#listview",
-        type : "thinLine",
-        hasIcon : true,
-        hasAngle : true,
-        hasSubTitle : true,
-        multiLine : 1,
-    });
-    lv.set([{
-        title : "新消息通知",
-        icon:"./css/res/icon-message-act.png",
-        id:"1"
-    }, {
-        title : "基本信息",
-        icon:"./css/res/icon-edit-act.png",
-        id:"2"
-    }, {
-        title : "我的二维码",
-        icon:"./css/res/icon-erweima-act.png",
-        id:"3"
-    }, {
-        title : "设置",
-        icon:"./css/res/icon-setting-act.png",
-        id:"4"
-    }, {
-        title : "关于",
-        icon:"./css/res/icon-warn-act.png",
-        id:"5"
-    },{
-        title : "退出登录",
-        icon:"./css/res/icon-close-act.png",
-        id:"5"
-    }])
-    lv.on("click",function(ele,obj,curEle){
-    })
-    </script>  
-    <script>
-       var lv = appcan.listview({
-        selector : "#local",
-        type : "thickLine",
-        hasIcon : true,
-        hasAngle : false,
-        hasSubTitle : true,
-        multiLine : 1,
-    });
- var json2 =[{
-        title : "登陆",
-        describe:"第二条消息",
-        icon:"index/img/img01.jpeg",
-        id:"test"
-    },{
-        title : "主页",
-        describe:"第一条记录",
-        icon:"./index/img/img02.jpeg",
-        id:"test"
-    },{
-        title : "消息3",
-        describe:"内容",
-        icon:"./index/img/img03.jpeg",
-        id:"3"
-    },{
-        title : "消息4",
-        describe:"内容",
-        icon:"./index/img/img04.jpeg",
-        id:"4"
-    },{
-        title : "消息5",
-        describe:"内容",
-        icon:"./index/img/img05.jpeg",
-        id:"5"
-    },{
-        title : "消息6",
-        describe:"内容",
-        icon:"./index/img/img06.jpeg",
-        id:"6"
-    }]
-    lv.set(json2)
-    
-    lv.on("click",function(ele,obj,curEle){
-        localStorage.setItem("yemian",obj.note);
-        var id =obj.id;
-        appcan.window.open({
-            name:id,
-            data:id+'.html',
-            aniId:10
-        });
-    })
-    </script>    <script>    
-    </script>
  </body>
 
 </html>
