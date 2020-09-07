@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="public_css/background-color.css">
     </head>
 
-    <body class="" ontouchstart>
+    <body class="" ontouchstart style="background-color: #FAFAFA;>
 
         <div data-control="PAGE">
             <div class="swiper-container">
@@ -114,8 +114,8 @@
                     <div class="swiper-slide bc-grey">
                         <div class="user-head">
                             <div class="container">
-                                <div class="userimg"></div>
-                                <div class="username">花花的世界</div>
+                                <div class="userImg"></div>
+                                <div class="userName"></div>
                             </div>
                         </div>
                         <div class="user-body">
@@ -172,6 +172,10 @@
             })
        
 
+            var person = JSON.parse(localStorage.getItem("user"));
+            console.log(person);
+            document.querySelector('.userName').innerHTML = person.username;
+
             var lv = appcan.listview({
                 selector : "#listview",
                 type : "thinLine",
@@ -183,29 +187,47 @@
             lv.set([{
                 title : "新消息通知",
                 icon:"./css/res/icon-message-act.png",
-                id:"1"
+                note :'0',
+                id:"message"
+            
             }, {
                 title : "基本信息",
                 icon:"./css/res/icon-edit-act.png",
-                id:"2"
+                note :'1',
+                id:"info"
             }, {
                 title : "我的二维码",
                 icon:"./css/res/icon-erweima-act.png",
-                id:"3"
+                note :'2',
+                id:"code"
             }, {
                 title : "设置",
                 icon:"./css/res/icon-setting-act.png",
-                id:"4"
+                note :'3',
+                id:"setting"
             }, {
                 title : "关于",
                 icon:"./css/res/icon-warn-act.png",
-                id:"5"
+                note :'4',
+                id:"about"
             },{
                 title : "退出登录",
                 icon:"./css/res/icon-close-act.png",
-                id:"5"
-            }])
+                note :'5',
+                id:"login"
+            }]) 
+            //列表的点击触发事件
             lv.on("click",function(ele,obj,curEle){
+                //将数据存储在本地
+                localStorage.setItem("yemian",obj.title);
+                var id = obj.id;
+                
+                appcan.window.open({
+                    name : id,
+                    data : id + '.html',
+                    anlid :2
+                })
+               
             })
  
             var lv = appcan.listview({

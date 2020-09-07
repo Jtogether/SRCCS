@@ -115,7 +115,7 @@ body {
     flex-direction: column;
 }
 
-.userimg {
+.userImg {
     width:6em;
     height:6em;
     background: url(../img/touxiang.png) no-repeat;
