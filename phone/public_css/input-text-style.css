@@ -4,7 +4,7 @@ input[type="text"]{
 	border: none;
 	border-bottom: 0.0625rem solid rgb(84,92,100);
 	width: 20em;
-	font-size: .7em;
+	font-size: .8em;
 	height: 2em;
 	position: relative;
 }
@@ -13,7 +13,7 @@ input[type="password"]{
 	border: none;	
 	border-bottom: 0.0625rem solid rgb(84,92,100);
 	width: 20em;
-	font-size: .7em;
+	font-size: .8em;
 	height: 2em;
 	position: relative;
 }

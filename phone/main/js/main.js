@@ -1,22 +1,47 @@
-// init
-var rotogram_Json = [
-    {
-        "name":'今日公告：请吊机上的人员不要乱扔垃圾',
-        "text":'PRTM最近的跨行bai业研究表明，研发费用与业务增长、获利性、市场覆盖率或者股东价值之间只有很少或者几乎没有关联。'
-    },
-    {
-        "name":'关于：研发费用与业务增长不关联问题'
-    }
-]
+// // init
+// var rotogram_Json = [
+//     {
+//         "name":'今日公告：请吊机上的人员不要乱扔垃圾',
+//         "text":'PRTM最近的跨行bai业研究表明，研发费用与业务增长、获利性、市场覆盖率或者股东价值之间只有很少或者几乎没有关联。'
+//     },
+//     {
+//         "name":'关于：研发费用与业务增长不关联问题'
+//     }
+// ]
 
+
+var xmlHR;
 var li_content = document.querySelectorAll("li");
 var ul_f = document.querySelector(".rotogram");
-(function () {
-    for (let i = 0;i < rotogram_Json.length;i++){
 
-        li_content[i].innerHTML = '<div style="height: 100%;width: 7em;background: rgba(43,43,43,.4);display: flex;float: right"><p style="margin: auto;width: 6em;">'+ rotogram_Json[i].name+'</p></div>'
+if(window.XMLHttpRequest){
+    xmlHR = new XMLHttpRequest();
+}else {
+    xmlHR = new ActiveXObject('Microsoft.XMLHTTP');
+};
+
+xmlHR.open("GET","main/json/rotogram.json");
+xmlHR.send();
+
+xmlHR.onreadystatechange = function () {
+    if (xmlHR.readyState == 4 && xmlHR.status == 200){
+        var rotogram_Json = xmlHR.responseText;
+        rotogram_Json = JSON.parse(rotogram_Json);
+        // console.log(rotogram_Json);
+        for (let i = 0;i < rotogram_Json.length;i++){
+
+            li_content[i].innerHTML = '<div style="height: 100%;width: 7em;background: rgba(43,43,43,.4);display: flex;float: right"><p style="margin: auto;width: 6em;">'+ rotogram_Json[i].name+'</p></div>'
+        }
     }
-})()
+}
+
+
+// (function () {
+//     for (let i = 0;i < rotogram_Json.length;i++){
+//
+//         li_content[i].innerHTML = '<div style="height: 100%;width: 7em;background: rgba(43,43,43,.4);display: flex;float: right"><p style="margin: auto;width: 6em;">'+ rotogram_Json[i].name+'</p></div>'
+//     }
+// })()
 
 
 // 自动轮播
@@ -36,7 +61,6 @@ setTimeout(autoplay,1000);
 
 
 // 操作列表init
-
 {
     let list_Json = [
         {

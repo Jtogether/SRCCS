@@ -1,0 +1,53 @@
+.diy-page{
+    background: rgb(250,250,250) !important;
+}
+.diy-header{
+    background: rgb(250,250,250) !important;
+    color: rgb(39,39,39) !important;
+    /*border: none !important;*/
+}
+
+/* 登录文本框 */
+.content_login{
+    height: 100%;
+    width: 100%;
+    line-height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+}
+.content_login .logo{
+    height: 6.2em;
+    width: 6.2em;
+    background: url("../assets/icon/applogo.png") no-repeat;
+    background-size: 6em;
+    background-position: center;
+    margin: auto;
+}
+.content_login .text-under-logo{
+    text-align: center;
+    line-height: 4em;
+}
+.content_login .label{
+
+}
+
+/* icon */
+.login_icon{
+    position: absolute;
+    height: 1.8em;
+    width: 1.8em;
+    background: url(../assets/icon/login_icon.png) no-repeat;
+    background-size: 1.1em;
+    right: .05em;
+}
+.psw_icon{
+    position: absolute;
+    height: 1.8em;
+    width: 1.8em;
+    background: url(../assets/icon/psw_icon.png) no-repeat;
+    background-size: 1.1em;
+    right: .05em;
+}

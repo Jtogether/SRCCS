@@ -1,15 +1,31 @@
 /* 渐变按钮，长条，带点击效果 */
 .button-style-login{
 	height: 2.3em;
-	width: 21em;
+	width: 20em;
 	margin-top: 0.9em;
-	border-radius: 1.3rem;
+	border-radius: 1.8rem;
 	border: none;
 	background-image: linear-gradient(to right, rgb(80,163,253), rgb(0,226,250));
-	font-size: .65em;
+	font-size: .8em;
 	color: white;
 	outline: none;
 }
 .button-style-login:active{
 	background-image: linear-gradient(to right, rgb(100,149,237), rgb(100,226,250));
+}
+
+/* 渐变按钮，长条，带点击效果（颜色反转）*/
+.button-style-register{
+	height: 2.8em;
+	width: 25em;
+	margin-top: 1em;
+	border-radius: 15rem;
+	border: none;
+	background-image: linear-gradient(to right, rgb(0,226,250), rgb(80,163,253));
+	font-size: .8em;
+	color: white;
+	outline: none;
+}
+.button-style-register:active{
+	background-image: linear-gradient(to right, rgb(100,226,250), rgb(100,149,237));
 }
