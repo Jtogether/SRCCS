@@ -1,0 +1,68 @@
+.diy-page{
+    background: rgb(255,255,255) !important;
+}
+.diy-header{
+    background: rgb(102,175,233); !important;
+    color: rgb(255,255,255) !important;
+    /*border: none !important;*/
+}
+.diy-header-icon{
+    background: url("../../css/icons/icon-back.png") !important;
+}
+.diy-page-content{
+    background: rgb(255,255,255);
+    height: 100%;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+.diy-page-content ul{
+    background: rgb(255,255,255);
+    width: 100%;
+}
+.form-item{
+    /*background: #007DB8;*/
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255,255,255);
+}
+.form-item-c{
+    height: auto;
+    width: auto;
+    padding: 1rem 0;
+}
+.form-item-text{
+    /*padding: 0 0 .4rem 0;*/
+    font-size: 1.8rem;
+    color: rgba(84,92,100,.85);
+}
+.form-item-content{
+    background: rgb(255,255,255) !important;
+    font-size: 2rem !important;
+    color: rgb(60,63,65);
+}
+.diy-page-content li{
+    width: 100% !important;
+    list-style: circle !important;
+}
+.fixed-button{
+    height: 4em;
+    width: 4em;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 2em;
+    background: rgb(102,175,233);
+    display: flex;
+}
+.button-img{
+    height: 2.5em;
+    width: 2.5em;
+    margin: auto;
+    background: url("../../css/icons/icon-ok.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}

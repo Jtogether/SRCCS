@@ -115,9 +115,21 @@ setTimeout(autoplay,1000);
     // }
     let itemlist = document.querySelectorAll('.item')
     for (let i = 0; i < list_Json.length;i++){
-            itemlist[i].innerHTML = '<div class="item"><div class="item-icon '+ list_Json[i].classname +'"></div><p class="item-text">'+ list_Json[i].text +'</p></div>'
+
+        itemlist[i].innerHTML = '<div class="item" id="item_'+ list_Json[i].id +'" onclick="openPage('+ list_Json[i].id +')"><div class="item-icon '+ list_Json[i].classname +'"></div><p class="item-text">'+ list_Json[i].text +'</p></div>'
     }
 
-
+    function openPage(pid){
+        switch (pid) {
+            case 7:{
+                appcan.window.open({
+                    name: "application_form",
+                    dataType:0,
+                    anild: 8,
+                    data: "application_form.html",
+                })
+            }
+        }
+    }
 }
 
