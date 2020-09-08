@@ -174,7 +174,11 @@
 
             var person = JSON.parse(localStorage.getItem("user"));
             console.log(person);
+            if(person == null){
+                document.querySelector('.userName').innerHTML = "未登录";
+            }else{
             document.querySelector('.userName').innerHTML = person.username;
+            }   
 
             var lv = appcan.listview({
                 selector : "#listview",
