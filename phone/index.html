@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="public_css/background-color.css">
     </head>
 
-    <body class="" ontouchstart style="background-color: #FAFAFA;>
+    <body class="" ontouchstart style="background-color: #FAFAFA;">
 
         <div data-control="PAGE">
             <div class="swiper-container">
@@ -92,22 +92,34 @@
 					
 					<!--  第三个页面  -->
                     <div class="swiper-slide">
-						<div class="uba bc-border uinput ub ub-f1">
-							<textarea placeholder="内容" type="text" class="ub-f1"></textarea>
-						</div>
+						<div class="diy-tools">
+							<div class="scrollbox">
+								<div class="uinn-a7">
+									<div class="ub ub-ver">
+										<div class="t-gra-9f ulev-4 uinn-na">
+											审核申请
+										</div>
+										<div id="listview4" class="ubt bc-border sc-bg" style="background-color: white">
+										</div>
+									</div>
+									<div class="ub ub-ver">
+										<div class="t-gra-9f ulev-4 uinn-na">
+											详细情况
+										</div>
+										<div id="listview5"  class="ubt bc-border sc-bg" style="background-color: white">
 
-						<div class="uba bc-border uinput ub ub-f2">
-							<textarea placeholder="内容" type="text" class="ub-f2"></textarea>
-						</div>
-
-						<div class="uba bc-border uinput ub ub-f3">
-							<textarea placeholder="内容" type="text" class="ub-f3"></textarea>
-						</div>
-						<div class="uba bc-border uinput ub ub-f4">
-							<textarea placeholder="内容" type="text" class="ub-f4"></textarea>
-						</div>
-						<div class="uba bc-border uinput ub ub-f5">
-							<textarea placeholder="内容" type="text" class="ub-f5"></textarea>
+										</div>
+									</div>
+									<div class="ub ub-ver">
+										<div class="t-gra-9f ulev-4 uinn-na">
+											统计信息
+										</div>
+										<div id="listview6"  class="ubt bc-border sc-bg" style="background-color: white">
+										</div>
+									</div>
+									<br />
+								</div>
+							</div>
 						</div>
                     </div>
                     <!-- 第四个页面 -->
@@ -285,7 +297,67 @@
                         aniId:10
                     });
                 })
-      
+
+
+			var lv = appcan.listview({
+				selector : "#listview4",
+				type : "thinLine",
+				hasIcon : true,
+				hasAngle : true,
+				hasSubTitle : true,
+				multiLine : 1,
+			});
+			lv.set([{
+				title : "财务报表",
+				icon:"./css/res/caiwu.png",
+
+				id:"1"
+			}, {
+				title : "伙食表",
+				icon:"./css/res/huoshi.png",
+				id:"2"
+			},{
+				title : "产值量对账单表",
+				icon:"./css/res/chart.png",
+				id:"3"
+			}])
+			lv.on("click",function(ele,obj,curEle){
+			})
+			var lv = appcan.listview({
+				selector : "#listview5",
+				type : "thinLine",
+				hasIcon : true,
+				hasAngle : true,
+				hasSubTitle : true,
+				multiLine : 1,
+			});
+			lv.set([{
+				title : "工资表",
+				icon:"./css/res/money3.png",
+
+				id:"1"
+			}, {
+				title : "借支表",
+				icon:"./css/res/form.png",
+				id:"2"
+			}])
+			lv.on("click",function(ele,obj,curEle){
+			})
+			var lv = appcan.listview({
+				selector : "#listview6",
+				type : "thinLine",
+				hasIcon : true,
+				hasAngle : true,
+				hasSubTitle : true,
+				multiLine : 1,
+			});
+			lv.set([{
+				title : "人员信息",
+				icon:"./css/res/peoples.png",
+				id:"1"
+			}])
+			lv.on("click",function(ele,obj,curEle){
+			})
         </script>
  </body>
 
