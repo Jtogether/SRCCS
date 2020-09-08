@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+	    *{
+	        padding: 0;
+	        margin: 0;
+	    }
+	    .bg{
+	        width:100%;
+            height:100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-image: url(./index/img/welcome.jpg);
+            background-size: cover;
+            background-position: center 0;
+	    }
+	    
+	</style>
+	<body>
+	    <header style="width: 120px;position:fixed;right:0;font-size: 40px;text-align: center;padding: 15px 10px 0 0">
+	        <div style="background-color:white;">
+	            <a href="login.html" title="点击访问" style="text-decoration: none;">跳过</a><span id="time">4</span>
+	        </div>
+	        
+	    </header>  
+        <div class="bg"></div>
+ 
+        <script>
+            delayURL();
+            function delayURL() {
+                var delay = document.getElementById("time").innerHTML;
+                var t = setTimeout("delayURL()", 1000);
+                if (delay > 0) {
+                    delay--;
+                    document.getElementById("time").innerHTML = delay;
+                } else {
+                    clearTimeout(t);
+                    window.location.href = "login.html";
+                }
+            }
+        </script>
+ 
+	</body>
+	
+	
+</html>
