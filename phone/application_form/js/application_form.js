@@ -20,3 +20,11 @@ function form_list(obj) {
         el.append(elem)
     }
 }
+
+let nav_left_button = document.getElementById('nav-left');
+nav_left_button.onclick = function () {
+    appcan.window.close({
+        anild: 17,
+        animDuration: 1000
+    })
+}

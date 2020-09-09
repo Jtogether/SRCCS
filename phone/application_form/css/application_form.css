@@ -7,7 +7,8 @@
     /*border: none !important;*/
 }
 .diy-header-icon{
-    background: url("../../css/icons/icon-back.png") !important;
+    background: url("../../css/icons/icon-back.png") no-repeat;
+    background-size: cover;
 }
 .diy-page-content{
     background: rgb(255,255,255);
@@ -36,12 +37,12 @@
 }
 .form-item-text{
     /*padding: 0 0 .4rem 0;*/
-    font-size: 1.8rem;
+    font-size: .9em;
     color: rgba(84,92,100,.85);
 }
 .form-item-content{
     background: rgb(255,255,255) !important;
-    font-size: 2rem !important;
+    /*font-size: 1.1em !important;*/
     color: rgb(60,63,65);
 }
 .diy-page-content li{

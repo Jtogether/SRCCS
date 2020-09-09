@@ -4,7 +4,6 @@ function checkUaP(){
     let info = JSON.parse(localStorage.getItem("user"));
 
     if ( userName == info.username && psWord == info.psw){
-        alert("登录成功！")
         appcan.window.open({
                 name: "index",
                 dataType:0,
