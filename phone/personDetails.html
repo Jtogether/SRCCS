@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="personDetails/css/personDetails.css">
+    </head>
+    <body class="" ontouchstart style="background-color: white">
+        <div class="bc-bg" tabindex="0" data-control="PAGE" id="Page">
+            <div class="uh bc-head  ubb bc-border" data-control="HEADER" id="Header">
+                <div class="ub">
+                    <div class="nav-btn" id="nav-left">
+                        <div class="ub-img1 icon-left ulev2">
+                        </div>
+                    </div>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">人员详情信息</h1>
+                    <div class="nav-btn" id="nav-right">
+                        <div class="fa  fa-1g  ub-img1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bc-bg ub ub-ver ub-ac ub-con " style="background-color:white;" data-control="FLEXBOXVER" id="ContentFlexVer">
+                <div class="ub-fh uinn-4a">
+                	<div class="uinn-7">
+	                    <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:6em;">
+	                            姓名：
+	                        </div>
+	                        <div id="details_1" class="ub-f1 ulev-1 font-w">
+	                            
+	                        </div>
+	                    </div>
+	                    <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:6em;">
+	                            入职时间：
+	                        </div>
+	                        <div id="details_2" class="ub-f1 ulev-1 font-w">
+	                            
+	                        </div>
+	                    </div>
+	                    <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:5em;">
+	                            身份证信息：
+	                        </div>
+	                        <div id="details_3" class="ub-f1 ulev-1 font-w">
+	                            
+	                        </div>
+	                    </div>
+	                    <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:6em;">
+	                           银行卡号：
+	                        </div>
+	                        <div id="details_4" class="ub-f1 ulev-1 font-w">
+	                            
+	                        </div>
+	                    </div>
+	                    <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:6em;">
+	                            支行名称：
+	                        </div>
+	                        <div id="details_5" class="ub-f1 ulev-1 font-w">
+	                           
+	                        </div>
+	                    </div>
+	                    <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:6em;">
+	                           工薪：
+	                        </div>
+	                        <div id="details_6" class="ub-f1 ulev-1 font-w">
+	                            
+	                        </div>
+	                    </div>
+	                     <div class="ub ubb b-c2 uinn8">
+	                        <div class="t-9b ulev-1" style="min-width:6em;">
+	                           负责人：
+	                        </div>
+	                        <div id="details_7" class="ub-f1 ulev-1 font-w">
+	                            
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	            </div>
+                <div class="uinn-4b"></div>
+            </div>
+
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+		<script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.optionList.js"></script>
+		<script src="js/appcan.slider.js"></script>
+		<script src="js/appcan.tab.js"></script>
+		<script src="js/appcan.treeview.js"></script>
+        <script src="personDetails/js/personDetails.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="personDetails/js/json.js"></script>
+        <script>
+            console.log(persons);
+            var id = localStorage.getItem("id");
+            $('#details_1').text(persons[id-1].name);
+            $('#details_2').text(persons[id-1].time);
+            $('#details_3').text(persons[id-1].sfz);
+            $('#details_4').text(persons[id-1].card);
+            $('#details_5').text(persons[id-1].bankName);
+            $('#details_6').text(persons[id-1].salary);
+            $('#details_7').text(persons[id-1].boss);
+        </script>
+    </body>
+</html>

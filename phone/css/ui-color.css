@@ -70,7 +70,11 @@
 .sc-btn {
     background-color: #00A1EA;
 }
-
+/*personInfo.html列表文字样式*/
+.p-i {
+    color: black;
+    font-size: 1.2em;
+}
 
 
 

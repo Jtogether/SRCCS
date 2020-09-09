@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="personInfo/css/personInfo.css">
+    </head>
+    <body class="" ontouchstart>
+        <div class="bc-bg" style="background-color: #FAFAFA;" tabindex="0" data-control="PAGE" id="Page">
+            <div style="static" class="uh bc-head  ubb bc-border" data-control="HEADER" id="Header">
+                <div class="ub">
+                    <div class="nav-btn" id="nav-left">
+                        <div class="ub-img1 icon-left ulev2">
+                        </div>
+                    </div>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">人员信息列表</h1>
+                    <div class="nav-btn" id="nav-right">
+                        <div class="fa  fa-1g  ub-img1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div id="listview" style="padding-top: 2.5em;background-color: white;"  class="ubt bc-border sc-bg p-i">
+
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+		<script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.optionList.js"></script>
+		<script src="js/appcan.slider.js"></script>
+		<script src="js/appcan.tab.js"></script>
+		<script src="js/appcan.treeview.js"></script>
+        <script src="personInfo/js/personInfo.js"></script>
+        <script src="./json.js"></script>
+        <script>
+    var lv = appcan.listview({
+    selector : "#listview",
+    type : "thickLine",
+    hasIcon : false,
+    hasAngle : true,
+    hasSubTitle : true,
+    multiLine : 1,
+});
+lv.set([{
+    title : "小明",
+    describe:"445281199709192290",
+    //note:"测试",
+    icontitle:"appcan",
+    //subTitle:"2019-03-21",
+    subDescribe:"2019-03-21",
+    //subNote:"北京",
+    id:"1"
+},{
+    title : "小蓝",
+    describe:"445281199709192290",
+    //note:"测试",
+    icontitle:"appcan",
+    //subTitle:"2020-03-21",
+    subDescribe:"2020-03-21",
+    //subNote:"北京",
+    id:"2"
+},{
+    title : "小红",
+    describe:"445281199709191111",
+    //note:"测试",
+    icontitle:"appcan",
+    //subTitle:"2020-03-21",
+    subDescribe:"2020-03-25",
+    //subNote:"北京",
+    id:"3"
+}])
+lv.on("click",function(ele,obj,curEle){
+    localStorage.setItem("id",obj.id);
+                    appcan.window.open({
+                        name:'personDetails',
+                        data:'personDetails.html',
+                        aniId:10
+                    });
+})
+    </script>
+    </body>
+</html>
