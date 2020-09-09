@@ -122,6 +122,7 @@ setTimeout(autoplay,1000);
     function openPage(pid){
         switch (pid) {
             case 7:{
+                localStorage.setItem("list_id","0")
                 appcan.window.open({
                     name: "application_form",
                     dataType:0,

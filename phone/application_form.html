@@ -56,29 +56,11 @@
 		<script src="js/appcan.tab.js"></script>
 		<script src="js/appcan.treeview.js"></script>
         <script src="application_form/js/application_form.js"></script>
+        <script src="application_form/js/page_data.js"></script>
+
         <script>
-            var showList = new form_list({
-                title: "月结供应商付款申请单",
-                ele: "#forList",
-                data: [
-                    "项目名称",
-                    "分包合同名称",
-                    "合同编号",
-                    "合同价/结算价",
-                    "分包合同负责人",
-                    "分包负责人电话",
-                    "银行名称",
-                    "银行账号",
-                    "银行开户人名称",
-                    "银行支行名称",
-                    "累计已完成金额",
-                    "累计已付款金额（元）（不含本期应扣款）",
-                    "本期应扣款（元）",
-                    "结余金额（元）",
-                    "本次申请支付金额（元）",
-                    "分包合同负责人/委托人签名",
-                ]
-            })
+            var list_id = + localStorage.getItem("list_id")
+            var showList = new form_list(list_init[list_id])
         </script>
     </body>
 </html>
