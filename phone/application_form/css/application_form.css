@@ -12,22 +12,22 @@
 }
 .diy-page-content{
     background: rgb(255,255,255);
-    height: 100%;
+    height: auto;
     width: 100%;
     margin-top: 3em;
-    margin-bottom: 3em;
 }
 .diy-page-content ul{
     background: rgb(255,255,255);
-    width: 100%;
+    /*width: 100%;*/
+    list-style: none;
 }
 .form-item{
     /*background: #007DB8;*/
     height: auto;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /*align-items: center;*/
+    /*justify-content: center;*/
     background: rgb(255,255,255);
 }
 .form-item-c{
@@ -36,7 +36,7 @@
     padding: 1rem 0;
 }
 .form-item-text{
-    /*padding: 0 0 .4rem 0;*/
+    padding: 0 0 .4rem 0;
     font-size: .9em;
     color: rgba(84,92,100,.85);
 }
@@ -46,8 +46,8 @@
     color: rgb(60,63,65);
 }
 .diy-page-content li{
-    width: 100% !important;
-    list-style: circle !important;
+    /*width: 100% !important;*/
+    list-style: circle;
 }
 .fixed-button{
     height: 4em;
