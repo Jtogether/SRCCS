@@ -331,6 +331,7 @@
 					aniId:8
 				});
 			})
+            //新建表
 			var lv = appcan.listview({
 				selector : "#listview5",
 				type : "thinLine",
@@ -342,14 +343,20 @@
 			lv.set([{
 				title : "新建工资表",
 				icon:"./css/res/money3.png",
-				id:"4"
+				id:"wages_add"
 			}, {
 				title : "新建借支表",
 				icon:"./css/res/form.png",
-				id:"5"
+				id:"advancePay_add"
 			}])
 			lv.on("click",function(ele,obj,curEle){
+			    appcan.window.open({
+                     name:obj.id,
+                     data:obj.id + ".html",
+                     aniId:2
+                });
 			})
+			//人员信息
 			var lv = appcan.listview({
 				selector : "#listview6",
 				type : "thinLine",
