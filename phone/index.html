@@ -185,7 +185,7 @@
        
 
             var person = JSON.parse(localStorage.getItem("user"));
-            console.log(person);
+            // console.log(person);
             if(person == null){
                 document.querySelector('.userName').innerHTML = "未登录";
             }else{
@@ -310,17 +310,26 @@
 			lv.set([{
 				title : "财务报表",
 				icon:"./css/res/caiwu.png",
-				id:"1"
+				id:"1",
+				name:"caiwu"
 			}, {
 				title : "伙食表",
 				icon:"./css/res/huoshi.png",
-				id:"2"
+				id:"2",
+				name: "huoshi "
 			},{
 				title : "产值量对账单表",
 				icon:"./css/res/chart.png",
-				id:"3"
+				id:"3",
+				name:"statement-list"
 			}])
 			lv.on("click",function(ele,obj,curEle){
+				// var name =obj.name;
+				appcan.window.open({
+					name:'statement-list',
+					data:'statement-list.html',
+					aniId:8
+				});
 			})
 			var lv = appcan.listview({
 				selector : "#listview5",

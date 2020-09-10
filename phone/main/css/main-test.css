@@ -68,13 +68,14 @@
     position: absolute;
     left: 0;
     transition: left .5s;
-    overflow: hidden;
+
 }
 .main-content-autoplay .rotogram>li{
     height: 13em;
     width: 50%;
     float: left;
     list-style-type: none;
+    overflow: hidden;
     /*position: absolute;*/
 }
 .main-content-autoplay .rotogram>li:nth-child(1){
