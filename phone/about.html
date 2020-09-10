@@ -20,7 +20,8 @@
                         <div class="ub-img1 icon-left ulev2">
                         </div>
                     </div>
-                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">关于</h1>
+                    <h1 id="thisTitle" class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">关于</h1>
+    
                     <div class="nav-btn" id="nav-right">
                         <div class="fa  fa-1g  ub-img1">
                         </div>
@@ -76,5 +77,8 @@
 		<script src="js/appcan.tab.js"></script>
 		<script src="js/appcan.treeview.js"></script>
         <script src="about/js/about.js"></script>
+        <script>
+            document.querySelector("#thisTitle").innerHTML = localStorage.getItem("yemian");
+        </script>
     </body>
 </html>
