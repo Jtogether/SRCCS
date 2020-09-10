@@ -86,7 +86,7 @@
 					
                     <!-- 第二个页面 -->
                     <div class="swiper-slide diy-page-main">
-						<div id="local"  class="ubt bc-border sc-bg bc-grey">
+						<div id="message"  class="ubt bc-border sc-bg bc-grey">
 						</div>
                     </div>
 					
@@ -247,7 +247,7 @@
             })
  
             var lv = appcan.listview({
-                selector : "#local",
+                selector : "#message",
                 type : "thickLine",
                 hasIcon : true,
                 hasAngle : false,
@@ -256,46 +256,41 @@
             });
 
             var json2 =[{
-                    title : "登陆",
-                    describe:"第二条消息",
-                    icon:"./index/img/img01.jpeg",
-                    id:"test"
+                    title : "工资",
+                    describe:"这个月的工资已下发，请大家留意一下。",
+                    icon:"index/img/img01.jpeg",
+                    id:"1",
                 },{
-                    title : "主页",
-                    describe:"第一条记录",
-                    icon:"./index/img/img02.jpeg",
-                    id:"test"
+                    title : "项目3进度",
+                    describe:"项目3已进行过半，加油努力干！",
+                    icon:"index/img/img02.jpeg",
+                    id:"2"
                 },{
-                    title : "消息3",
-                    describe:"内容",
-                    icon:"./index/img/img03.jpeg",
+                    title : "好消息",
+                    describe:"项目1已顺利完工。",
+                    icon:"index/img/img03.jpeg",
                     id:"3"
                 },{
-                    title : "消息4",
-                    describe:"内容",
-                    icon:"./index/img/img04.jpeg",
+                    title : "重大消息！！！",
+                    describe:"小明携手小蓝完成项目4的竞标。",
+                    icon:"index/img/img04.jpeg",
                     id:"4"
                 },{
-                    title : "消息5",
-                    describe:"内容",
-                    icon:"./index/img/img05.jpeg",
+                    title : "最新任务",
+                    describe:"请大家打起精神迎接新的挑战...",
+                    icon:"index/img/img05.jpeg",
                     id:"5"
                 },{
-                    title : "消息6",
-                    describe:"内容",
-                    icon:"./index/img/img06.jpeg",
+                    title : "十月份团建",
+                    describe:"爬山走起！",
+                    icon:"index/img/img06.jpeg",
                     id:"6"
                 }]
+                
                 lv.set(json2)
                 
                 lv.on("click",function(ele,obj,curEle){
-                    localStorage.setItem("yemian",obj.note);
-                    var id =obj.id;
-                    appcan.window.open({
-                        name:id,
-                        data:id+'.html',
-                        aniId:10
-                    });
+
                 })
 
 			//  第三个页面
