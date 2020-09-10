@@ -130,9 +130,12 @@
                                 <div style="font-size: 1.4em;font-weight: 600" class="userName"></div>
                             </div>
                         </div>
-                        <div class="user-body">
+                         <div class="user-body">
+                            <div id="listview_switch" style="background-color: white" class="sc-border sc-bg">
+</div> 
+
                             <div id="listview"  class="ubt bc-border sc-bg" style="background-color: white;">
-							</div>
+                            </div>
 
                         </div>
                     </div>
@@ -191,7 +194,22 @@
             }else{
             document.querySelector('.userName').innerHTML = person.username;
             }   
-
+                var lv_switch=appcan.listview({
+                selector : "#listview_switch",
+                type : "thinLine",
+                hasIcon : true,
+                hasAngle : true,
+                hasSubTitle : false,
+                multiLine : 1,
+                hasControl : true
+            }).set([{
+                title : "新消息通知",
+                icon : "./css/res/icon-message-act.png",
+                "switchBtn":{
+                    mini:true,
+                    value:false
+                }
+            }]);
             var lv = appcan.listview({
                 selector : "#listview",
                 type : "thinLine",
@@ -201,26 +219,15 @@
                 multiLine : 1,
             });
             lv.set([{
-                title : "新消息通知",
-                icon:"./css/res/icon-message-act.png",
-                note :'0',
-                id:"message"
-            
-            }, {
                 title : "基本信息",
                 icon:"./css/res/icon-edit-act.png",
                 note :'1',
-                id:"info"
-            }, {
-                title : "我的二维码",
-                icon:"./css/res/icon-erweima-act.png",
-                note :'2',
-                id:"code"
+                id:"myInfo"
             }, {
                 title : "设置",
                 icon:"./css/res/icon-setting-act.png",
                 note :'3',
-                id:"setting"
+                id:"about"
             }, {
                 title : "关于",
                 icon:"./css/res/icon-warn-act.png",
