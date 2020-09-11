@@ -15,7 +15,9 @@
     padding:2.69em .5em 0 !important;
 }
 .t-9b{
-	color:#9b9b9b;
+	color: gray;
+    font-weight: 800;
+    font-size: 1em!important;
 }
 .b-c2{
 	border-color:#c2c2c2;
@@ -29,6 +31,7 @@
 .font-w{
     color: #000;
     font-weight: 200;
+    font-size: 1.1em!important;
 }
 .uinn-7{
     padding:0 .5em;
