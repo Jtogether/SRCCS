@@ -192,7 +192,7 @@
             if(person == null){
                 document.querySelector('.userName').innerHTML = "未登录";
             }else{
-            document.querySelector('.userName').innerHTML = person.username;
+           	 	document.querySelector('.userName').innerHTML = person.username;
             }   
                 var lv_switch=appcan.listview({
                 selector : "#listview_switch",
@@ -326,10 +326,10 @@
 				name:"statement-list"
 			}])
 			lv.on("click",function(ele,obj,curEle){
-				// var name =obj.name;
+				var Hname =obj.name;
 				appcan.window.open({
-					name:'statement-list',
-					data:'statement-list.html',
+					name: Hname,
+					data: Hname+'.html',
 					aniId:8
 				});
 			})
