@@ -297,7 +297,7 @@
                 lv.set(json2)
                 
                 lv.on("click",function(ele,obj,curEle){
-
+                    
                 })
 
 			//  第三个页面
@@ -333,7 +333,7 @@
 					aniId:8
 				});
 			})
-            //新建表
+            //表详情
 			var lv = appcan.listview({
 				selector : "#listview5",
 				type : "thinLine",
@@ -345,11 +345,11 @@
 			lv.set([{
 				title : "工资表",
 				icon:"./css/res/money3.png",
-				id:"wages_add"
+				id:"wagesList"
 			}, {
 				title : "借支表",
 				icon:"./css/res/form.png",
-				id:"advancePay_add"
+				id:"advancePayList"
 			}])
 			lv.on("click",function(ele,obj,curEle){
 			    appcan.window.open({
