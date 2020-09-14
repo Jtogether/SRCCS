@@ -3,13 +3,14 @@
     function() {
         appcan.window.close(-1);
     });
+    
     appcan.button("#nav-right", "btn-act",
     function() {
         appcan.window.open({
-                    name : "advancePay_add",
-                    data : "advancePay_add" + '.html',
+                    name : "wages_add",
+                    data : "wages_add" + '.html',
                     anlid :10
-                })    
+            }) ;
     });
 
     // appcan.ready(function() {

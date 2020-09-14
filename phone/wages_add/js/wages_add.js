@@ -4,13 +4,7 @@
         appcan.window.close(-1);
     });
     appcan.button("#nav-right", "btn-act",
-    function() {
-        appcan.window.open({
-                    name : "advancePay_add",
-                    data : "advancePay_add" + '.html',
-                    anlid :10
-                })    
-    });
+    function() {});
 
     // appcan.ready(function() {
         // $.scrollbox($("body")).on("releaseToReload",
