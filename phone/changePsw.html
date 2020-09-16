@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="register/css/register.css">
+
+        <link rel="stylesheet" href="register/css/register_input_style.css">
+        <link rel="stylesheet" href="public_css/button-style.css">
+    </head>
+    <body class="" ontouchstart>
+        <div class="bc-bg diy-page" tabindex="0" data-control="PAGE" id="Page">
+            <div class="uh bc-head  ubb bc-border diy-header" data-control="HEADER" id="Header">
+                <div class="ub">
+                    <div class="nav-btn" id="nav-left">
+                        <div class="fa fa-1g ub-img1"></div>
+                    </div>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">密&nbsp;码&nbsp;修&nbsp;改</h1>
+                    <div class="nav-btn" id="nav-right">
+                        <div class="fa  fa-1g  ub-img1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page_content">
+                <div class="register_form">
+                    <form action="">
+                        <div style="text-align: center; ">
+                            <p><label style="float: left;font-weight: bold; font-size: .9em;">用&nbsp;户&nbsp;名：</label></p>
+                            <input type="text" class="" placeholder="请输入要找回的用户名" id="username"/>
+                            <p><label style="float: left; margin-top: 2rem; font-weight: bold;font-size: .9em;">新&nbsp;密&nbsp;码：</label></p>
+                            <input type="password" class="" placeholder="请输入新密码" id="oldpsw"/>
+                            <p><label style="float: left; margin-top: 2rem; font-weight: bold;font-size: .9em;">再次输入密码：</label></p>
+                            <input type="password" class="" placeholder="再次确认密码" id="confirmpsw"/>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 1.4rem; position: relative;">
+                            <p><a href="" style="font-size: .8em; float: right; text-decoration: none;" onclick="pushToRegister()">注册</a></p>
+                            <button type="button" class="button-style-register" onclick="checkPsw()">修&nbsp;&nbsp;&nbsp;&nbsp;改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+		<script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.optionList.js"></script>
+		<script src="js/appcan.slider.js"></script>
+		<script src="js/appcan.tab.js"></script>
+		<script src="js/appcan.treeview.js"></script>
+<!--        <script src="register/js/register.js"></script>-->
+        <script>
+
+            function checkPsw() {
+                var infoFromLocalStorage = JSON.parse(localStorage.getItem('user'))
+                var usern = document.getElementById('username').value;
+                var opsw = document.getElementById('oldpsw').value;
+                var cpsw = document.getElementById('confirmpsw').value;
+                // console.log(usern)
+                // console.log(opsw)
+                // console.log(cpsw)
+                // console.log(infoFromLocalStorage)
+                if (usern === '' || opsw === '' || cpsw === ''){
+                    alert('空一个都别想改')
+                }else if (infoFromLocalStorage == null){
+                    alert('库中无记录该用户名，请先注册')
+                }else {
+                    if(usern === infoFromLocalStorage.username){
+                        if (opsw === cpsw){
+                            infoFromLocalStorage.psw = opsw;
+                            localStorage.setItem("user",JSON.stringify(infoFromLocalStorage))
+                            alert('修改成功！请用您的脑子记住你您的密码')
+                            appcan.window.open({
+                                name: "login",
+                                dataType:0,
+                                anild: 8,
+                                data: "login.html",
+                            });
+                        }else {
+                            alert('两次密码输入不正确')
+                        }
+                    }else {
+                        alert('库内无该用户名，请再次确认您的用户名')
+                    }
+                }
+            }
+            
+            // function startChange() {
+            //     if(usern === infoFromLocalStorage.username){
+            //         if (opsw === cpsw){
+            //             infoFromLocalStorage.psw = opsw;
+            //             localStorage.setItem("user",JSON.stringify(infoFromLocalStorage))
+            //             alert('修改成功！请用您的脑子记住你您的密码')
+            //             appcan.window.open({
+            //                 name: "login",
+            //                 dataType:0,
+            //                 anild: 8,
+            //                 data: "login.html",
+            //             });
+            //         }else {
+            //             alert('两次密码输入不正确')
+            //         }
+            //     }else {
+            //         alert('库内无该用户名，请再次确认您的用户名')
+            //     }
+            // }
+
+            function pushToRegister() {
+                appcan.window.open({
+                    name: "register",
+                    dataType:0,
+                    anild: 8,
+                    data: "register.html",
+                });
+            }
+        </script>
+    </body>
+</html>

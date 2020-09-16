@@ -23,3 +23,12 @@ function pushToRegister() {
         data: "register.html",
     });
 }
+
+function pushToChangePsw() {
+    appcan.window.open({
+        name: "changePsw",
+        dataType:0,
+        anild: 8,
+        data: "changePsw.html",
+    });
+}
