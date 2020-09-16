@@ -126,7 +126,7 @@
                     <div class="swiper-slide bc-grey">
                         <div class="user-head">
                             <div class="container">
-                                <div class="userImg"></div>
+                                <div class="userImg" onclick="touserDetails()"></div>
                                 <div style="font-size: 1.4em;font-weight: 600" class="userName"></div>
                             </div>
                         </div>
@@ -193,7 +193,16 @@
                 document.querySelector('.userName').innerHTML = "未登录";
             }else{
            	 	document.querySelector('.userName').innerHTML = person.username;
-            }   
+            }  
+             
+            function touserDetails(){
+                appcan.window.open({
+                    name : 'userDetails',
+                    data : 'userDetails.html',
+                    anlid :2
+                })
+            }
+            
                 var lv_switch=appcan.listview({
                 selector : "#listview_switch",
                 type : "thinLine",
@@ -219,7 +228,7 @@
                 multiLine : 1,
             });
             lv.set([{
-                title : "基本信息",
+                title : "修改密码",
                 icon:"./css/res/icon-edit-act.png",
                 note :'1',
                 id:"myInfo"
