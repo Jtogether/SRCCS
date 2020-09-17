@@ -40,12 +40,30 @@
 div.panel {
 text-align:left;
 background:white;
-/*border:solid 1px #c3c3c3;*/
-/*height:11em;*/
 }
 .panel1 {
     display: none;
 }
 .panel2 {
     display: none;
+}
+.box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.baseinfo {
+    width:2em;
+    height:2em;
+    float:left;
+    background-image: url(../img/base2.png);
+    background-size: cover
+    
+}
+.moreinfo {
+    width:2em;
+    height:2em;
+    float:left;
+    background-image: url(../img/more3.png);
+    background-size: cover
 }
