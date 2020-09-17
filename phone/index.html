@@ -265,12 +265,12 @@
             var json2 =[{
                     title : "工资",
                     describe:"这个月的工资已下发，请大家留意一下。",
-                    icon:"index/img/img01.jpeg",
+                    icon:"index/img/img01.png",
                     id:"1",
                 },{
                     title : "项目3进度",
                     describe:"项目3已进行过半，加油努力干！",
-                    icon:"index/img/img02.jpeg",
+                    icon:"index/img/img02.png",
                     id:"2"
                 },{
                     title : "好消息",
@@ -297,7 +297,18 @@
                 lv.set(json2)
                 
                 lv.on("click",function(ele,obj,curEle){
-                    
+                     element = document.getElementsByClassName('lazy lis-icon ub-img');
+                     // console.log(element[obj.id-1])
+                     // console.log(obj.id)
+                     switch(obj.id-1){
+                         case 0:
+                            element[0].style.background = "url(index/img/img01_click.png)";
+                            console.log(element[0]);
+                            break;
+                         case 1:
+                            element[1].style.background = "url(index/img/img02_click.png)";
+                            break;
+                     }   
                 })
 
 			//  第三个页面
