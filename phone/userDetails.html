@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="userDetails/css/userDetails.css">
+        <link rel="stylesheet" href="public_css/background-color.css">
+    </head>
+    <body class="" ontouchstart >
+        <div class="bc-grey " tabindex="0" data-control="PAGE" id="Page">
+            
+                <div class="user-head bc-grey">
+                            <div class="container">
+                                <div class="userImg"></div>
+                                <div style="" class="userTalk">个性签名：快乐生活！</div>
+                            </div>
+                        </div>
+                        <div class="user-body">
+                            <div class="flip1" style="border-bottom: 3px solid white;">
+                    <div class="box" style="background-color: darkgrey;width: 100%;height:2.5em;font-size: 1.1em;line-height: 2.5em;"><div class="baseinfo"></div><div style="margin-left: .3em;color:white;">个人基本信息</div></div>
+                    </div>
+                    <div class="panel1" style="background-color: white">
+                    <div style="border-bottom:1px solid gray;height:3.5em;">
+                    <div style="padding: .5em">用户名：</div>
+                    <div><span style="padding: .5em;" class="text1"></span></div>
+                    </div>
+                    <div style="border-bottom:1px solid gray;height:3.5em;">
+                    <div style="padding: .5em;">密码：</div>
+                    <div><span style="padding: .5em;" class="text2"></span></div>
+                    </div>
+                    <div>
+                    <div style="padding: .5em;">性别：</div>
+                    <div><span style="padding: .5em;" class="text3"></span></div>
+                    </div>
+                            </div>
+                            
+                     <div class="flip2">
+                    <div class="box" style="background-color: darkgrey;width: 100%;height:2.5em;font-size: 1.1em;line-height: 2.5em;"><div class="moreinfo"></div><div style="margin-left: .3em;color:white;">其他信息</div></div>
+                    </div>
+                    <div class="panel2" style="background-color: white">
+                    <div style="border-bottom:1px solid gray;height:3.5em;">
+                    <div style="padding: .5em">年龄：</div>
+                    <div><span style="padding: .5em;" class="text4"></span></div>
+                    </div>
+                    <div style="border-bottom:1px solid gray;height:3.5em;">
+                    <div style="padding: .5em;">电话：</div>
+                    <div><span style="padding: .5em;" class"text5">13902871921</span></div>
+                    </div>
+                    <div style="border-bottom:1px solid gray;height:3.5em;">
+                    <div style="padding: .5em;">住址：</div>
+                    <div><span style="padding: .5em;" class="text6">广州天河黄村</span></div>
+                    </div>
+                    <div style="border-bottom:1px solid gray;height:3.5em;">
+                    <div style="padding: .5em;">爱好：</div>
+                    <div><span style="padding: .5em;" class="text6">学习</span></div>
+                    </div>
+                            </div>
+                                   
+                            
+                      </div>
+                      <div class="footer">
+                             <button style="bottom:5em;position:fixed;background: rgba(169,169,169,.7) !important;width: 100%;height:2em;font-size: 1em;font-weight: 600;color: white;" id="back">返回</button>
+                      </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+		<script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.optionList.js"></script>
+		<script src="js/appcan.slider.js"></script>
+		<script src="js/appcan.tab.js"></script>
+		<script src="js/appcan.treeview.js"></script>
+        <script src="userDetails/js/userDetails.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script>
+        
+         $(document).ready(function(){
+              $(".flip1").click(function(){
+                $(".panel1").slideToggle(1000);
+                $(".panel2").slideUp(1000);
+                $("#img2").attr('src','userDetails/img/向右.png');
+              });
+              $(".flip2").click(function(){
+                $(".panel2").slideToggle(1000);
+                $(".panel1").slideUp(1000);
+                $("#img1").attr('src','userDetails/img/向右.png');
+              });
+              $("#back").click(function(){
+                  appcan.window.close(-1);
+              })
+            });   
+            
+            var person = JSON.parse(localStorage.getItem("user"));
+            
+            document.querySelector('.text1').innerHTML = person.username;
+            document.querySelector('.text2').innerHTML = person.psw;
+            document.querySelector('.text3').innerHTML = "男";
+            document.querySelector('.text4').innerHTML = "21";
+            document.querySelector('.text5').innerHTML = "1";
+            document.querySelector('.text6').innerHTML = "1";
+             
+            
+ 
+        </script>    
+    </body>
+</html>

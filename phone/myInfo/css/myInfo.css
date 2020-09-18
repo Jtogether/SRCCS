@@ -67,3 +67,21 @@
 .t-gre1{
     color: rgb(47, 255, 89);
 }
+.inputtext1 {
+    width: 10em;
+    height: 5em;
+}
+.inputtext2 {
+    width: 10em;
+    height: 5em;
+}
+div.panel {
+text-align:left;
+background:white;
+/*border:solid 1px #c3c3c3;*/
+height:12em;
+}
+div.flip {
+    margin:0px;
+    padding:5px;
+}
