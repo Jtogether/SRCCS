@@ -319,10 +319,14 @@
                      switch(obj.id-1){
                          case 0:
                             element[0].style.background = "url(index/img/img01_click.png)";
-                            console.log(element[0]);
+                            element[0].style.backgroundSize = "cover";
+                            //console.log(element[0]);
                             break;
                          case 1:
                             element[1].style.background = "url(index/img/img02_click.png)";
+                            element[1].style.backgroundSize = "cover";
+                            break;
+                         default:
                             break;
                      }   
                 })
