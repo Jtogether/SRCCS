@@ -117,6 +117,13 @@
 										<div id="listview6"  class="ubt bc-border sc-bg" style="background-color: white">
 										</div>
 									</div>
+									   <div class="ub ub-ver">
+                                        <div class="t-gra-9f ulev-4 uinn-na">
+                                            费用详情
+                                        </div>
+                                        <div id="listview7"  class="ubt bc-border sc-bg" style="background-color: white">
+                                        </div>
+                                    </div>
 									<br />
 								</div>
 							</div>
@@ -399,6 +406,26 @@
                         aniId:10
                     });
 			})
+			var lv = appcan.listview({
+                selector : "#listview7",
+                type : "thinLine",
+                hasIcon : true,
+                hasAngle : true,
+                hasSubTitle : true,
+                multiLine : 1,
+            });
+            lv.set([{
+                title : "费用详情",
+                icon:"./css/res/peoples.png",
+                id:"6"
+            }])
+            lv.on("click",function(ele,obj,curEle){
+                appcan.window.open({
+                        name:'cost1',
+                        data:'cost1.html',
+                        aniId:10
+                    });
+            })
         </script>
  </body>
 

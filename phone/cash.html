@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="machinery/css/machinery.css">
+          <link rel="stylesheet" type="text/css" href="cost1/css/bootstrap.css"/>
+    </head>
+    <body class="" ontouchstart>
+        <div class="bc-bg" tabindex="0" data-control="PAGE" id="Page" style="background-color: white;">
+            <div class="uh bc-head  ubb bc-border" data-control="HEADER" id="Header" >
+                <div class="ub">
+                    <div class="nav-btn" id="nav-left" onclick="txt() ">
+                        <div class="ub-img1 icon-left ulev2">
+                        </div>
+                    </div>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">现金费用</h1>
+                    <div class="nav-btn" id="nav-right">
+                        <div class="fa  fa-1g  ub-img1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <div class="nav" style="display: flex; justify-content: center;" >
+                <span id="" style="font-size: 1.25em;margin-top: 2.5em">
+                    <img src="img/add user.png" width="200px"height="200px" />现金费用
+                        
+                    
+                </span>
+            </div>
+            <form action="" method=""  >
+        <div class="addproject" style="background-color: white;">
+    <ul style="text-align: center;">
+        <li>输入名字：<input type="text" id="username" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
+        <li class="active">使用设备：<input type="text"id="equipment" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" />      </li>
+        <li class="begintime">起始时间：<input type="text" id="begintime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
+        <li>停车费用：<input type="text" id="endtime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
+        <li>结束时间：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
+      
+        
+    </ul>    
+        </div>
+
+            </form>
+            <div id="" style="padding-top:1em;float: right">
+                 <button class="btn btn-info" onclick="run()"style="font-size: 1.5em;">提交</button>
+            </div> 
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+        <script src="js/appcan.listview.js"></script>
+        <script src="js/appcan.optionList.js"></script>
+        <script src="js/appcan.slider.js"></script>
+        <script src="js/appcan.tab.js"></script>
+        <script src="js/appcan.treeview.js"></script>
+        <script src="machinery/js/machinery.js"></script>
+    </body>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    <script type="text/javascript">
+        $("button").click(function(){   
+        console.log($("form").serialize());
+
+        })      
+    </script>
+    <script type="text/javascript">
+        function run(){
+            var name = document.getElementById('username').value;
+            var eq = document.getElementById('equipment').value;
+            var bt = document.getElementById('begintime').value;
+            var et = document.getElementById('endtime').value;
+            var tt = document.getElementById('total').value;
+            if(name.length<=0){
+                alert("请输入账号");
+                return false;
+            }
+            if(eq.length<=0){
+                alert("请输入设备名称");
+                return false;
+            }
+            if(bt.length<=0){
+                alert("请输入起始时间");
+                return false;
+            }
+            if(et.length<=0){
+                alert("请输入结束时间");
+                return false;
+            }
+            if(tt.length<=0){
+                alert("请输入总共金额");
+                return false;
+            }
+        }
+                (function($) {
+    appcan.button("#nav-left", "btn-act",
+    function txt() {
+  var win = appcan.require('window');
+win.close({
+    aniId:17,
+    animDuration:1000
+});
+    });
+    });
+    </script>
+</html>
