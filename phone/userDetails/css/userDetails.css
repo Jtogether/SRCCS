@@ -51,6 +51,7 @@ background:white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background: rgba(169,169,169,.7) !important;
 }
 .baseinfo {
     width:2em;
