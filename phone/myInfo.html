@@ -84,6 +84,11 @@
             if(newPwd1 == '' || newPwd2 == ''){
                 alert('密码不能为空！');
             }else if(newPwd1 == newPwd2){
+                if(newPwd1 == old.psw){
+                    alert("新密码与原密码一致，请重新输入");
+                    document.querySelector('#newtext1').value = '';
+                    document.querySelector('#newtext2').value = '';
+                }else{
                var user2 = {
                     "username": old.username,
                     "psw": newPwd1 
@@ -96,6 +101,7 @@
                     data: "login.html",
                     anild: 8
                 })
+                }
             }else{
                 alert('两次输入密码不一致');
                 };

@@ -11,6 +11,8 @@ function checkUaP(){
                 anild: 8,
                 data: "index.html",
             })
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
     }else {
         alert("账号或密码错误！")
     }
