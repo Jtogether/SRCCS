@@ -13,6 +13,9 @@
 .icon-act .icon-back {
     background-image: url('icons/icon-back-act.png') !important;
 }
+.icon-back-act{
+    background-image: url('icons/icon-back-act.png') !important;
+}
 .icon-back {
     background-image: url('icons/icon-back.png') !important;
 }
