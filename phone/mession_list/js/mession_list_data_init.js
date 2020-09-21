@@ -9,7 +9,8 @@ let list_json = {
                 person2:"李三",
                 startDate:"2035-1-11 9:30",
                 endDate:"2035-1-12 18:00",
-                messionInfo:"那个吊机都折腰了，还干不干活了？？？"
+                messionInfo:"那个吊机都折腰了，还干不干活了？？？",
+                flag:0
             },
             {
                 title:"把一袋米扛到五楼",
@@ -19,7 +20,8 @@ let list_json = {
                 person2:"克里斯",
                 startDate:"2035-1-11 11:30",
                 endDate:"2035-1-12 12:30",
-                messionInfo:"把从五楼掉下去的几袋米抬回来"
+                messionInfo:"把从五楼掉下去的几袋米抬回来",
+                flag: 0
             }
         ]
     },

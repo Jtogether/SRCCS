@@ -59,18 +59,26 @@
         <script>
             let item = document.querySelectorAll('#menu_item')
             console.log(item[0].querySelector('.item-icon'))
-            var flag = 0;
 
             for (let i = 0;i < item.length;i++){
+                let flag = menu_data[i].flag
                 item[i].onclick = function () {
                     for (let j = 0;j < item.length;j++){
                         item[j].querySelector('.item-icon').style.transform = 'rotate(0deg)'
                         item[j].querySelector('.item-info').style.height = '0'
                         item[j].querySelector('.item-info').style.padding = '0'
                     }
-                    item[i].querySelector('.item-icon').style.transform = 'rotate(90deg)'
-                    item[i].querySelector('.item-info').style.height = '8em'
-                    item[i].querySelector('.item-info').style.padding = '.6em'
+                    if (flag === 1){
+                        item[i].querySelector('.item-icon').style.transform = 'rotate(0deg)'
+                        item[i].querySelector('.item-info').style.height = '0'
+                        item[i].querySelector('.item-info').style.padding = '0'
+                        flag = 0
+                    }else {
+                        item[i].querySelector('.item-icon').style.transform = 'rotate(90deg)'
+                        item[i].querySelector('.item-info').style.height = '8em'
+                        item[i].querySelector('.item-info').style.padding = '.6em'
+                        flag = 1
+                    }
                 }
             }
 
