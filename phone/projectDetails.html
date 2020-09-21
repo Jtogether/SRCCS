@@ -86,7 +86,15 @@
        $('#date').val(projects[id-1].startDate);
        $('#fare').val(projects[id-1].fare);
        $('#stage').val(projects[id-1].stage);
-       localStorage.setItem("taskId",4);   
+       let pjLink = document.querySelector('#link')
+       pjLink.onclick = function () {
+           appcan.window.open({
+               name: "mession_list",
+               dataType:0,
+               anild: 8,
+               data: "mession_list.html",
+           })
+       }
         </script>   
     </body>
 </html>

@@ -121,6 +121,16 @@ setTimeout(autoplay,1000);
 
     function openPage(pid){
         switch (pid) {
+            case 2:{
+                localStorage.setItem("projectId","0")
+                appcan.window.open({
+                    name: "mession_list",
+                    dataType:0,
+                    anild: 8,
+                    data: "mession_list.html",
+                })
+            }
+                break;
             case 5:{
                 localStorage.setItem("list_id","1")
                 appcan.window.open({
@@ -130,7 +140,7 @@ setTimeout(autoplay,1000);
                     data: "application_form.html",
                 })
             }
-            break;
+                break;
             case 6:{
                 localStorage.setItem("list_id","2")
                 appcan.window.open({
