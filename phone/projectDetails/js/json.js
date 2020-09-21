@@ -1,0 +1,25 @@
+var projects = [{
+    name:"项目1",
+    type:"a",
+    startDate:"2017-09-21",
+    fare:"￥150w",
+    stage:"施展准备"
+},{
+    name:"项目2",
+    type:"b",
+    startDate:"2018-03-12",
+    fare:"￥20w",
+    stage:"施展准备"
+},{
+    name:"项目3",
+    type:"c",
+    startDate:"2019-09-02",
+    fare:"￥200w",
+    stage:"土建施工"
+},{
+    name:"项目4",
+    type:"d",
+    startDate:"2020-07-02",
+    fare:"￥120w",
+    stage:"初步设计"
+}]
