@@ -35,17 +35,6 @@ let list_json = {
                 flag: 0
             },
             {
-                title:"吊机维修工作",
-                department:"工程维修部",
-                date:"2035-1-9",
-                person1:"张四",
-                person2:"李三",
-                startDate:"2035-1-11 9:30",
-                endDate:"2035-1-12 18:00",
-                messionInfo:"那个吊机都折腰了，还干不干活了？？？",
-                flag:0
-            },
-            {
                 title:"拖拉机机头拆换",
                 department:"东厂杂部",
                 date:"2035-1-9",
