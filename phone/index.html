@@ -4,8 +4,7 @@
     <head>
         <title></title>
         <meta charset="utf-8">
-        <meta name="viewport"
-        content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="css/ui-box.css">
         <link rel="stylesheet" href="css/ui-base.css">
@@ -14,8 +13,7 @@
         <link rel="stylesheet" href="css/appcan.control.css">
         <link rel="stylesheet" href="index/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="index/css/index.css">
-        <link rel="stylesheet" href="index/font-awesome/css/font-awesome.min.css">
-        
+        <link rel="stylesheet" href="index/font-awesome/css/font-awesome.min.css">       
 		<link rel="stylesheet" href="main/css/main-test.css">
 		<link rel="stylesheet" href="public_css/app-icon.css">
 		<link rel="stylesheet" href="public_css/background-color.css">
@@ -194,14 +192,17 @@
                 appcan.window.close(-1);
             })
        
-
+            //判断是否登录
             var person = JSON.parse(localStorage.getItem("user"));
-            // console.log(person);
-            if(person == null){
-                document.querySelector('.userName').innerHTML = "未登录";
-            }else{
-           	 	document.querySelector('.userName').innerHTML = person.username;
-            }  
+            for (var i=0; i < person.length; i++) {
+                // console.log(person);
+                if(person == null){
+                    document.querySelector('.userName').innerHTML = "未登录";
+                }else{
+                    document.querySelector('.userName').innerHTML = person[i].username;
+                }  
+            };
+              
              
             function touserDetails(){
                 appcan.window.open({
@@ -211,7 +212,8 @@
                 })
             }
             
-                var lv_switch=appcan.listview({
+            //个人页面
+            var lv_switch=appcan.listview({
                 selector : "#listview_switch",
                 type : "thinLine",
                 hasIcon : true,
@@ -261,7 +263,6 @@
                 //将数据存储在本地
                 localStorage.setItem("yemian",obj.title);
                 var id = obj.id;
-                
                 appcan.window.open({
                     name : id,
                     data : id + '.html',
@@ -270,6 +271,7 @@
                
             })
  
+            //消息页面
             var lv = appcan.listview({
                 selector : "#message",
                 type : "thickLine",

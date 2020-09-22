@@ -59,7 +59,7 @@
                     </div>
                     <div style="border-bottom:1px solid gray;height:3.5em;">
                     <div style="padding: .5em;">爱好：</div>
-                    <div><span style="padding: .5em;" class="text6">学习</span></div>
+                    <div><span style="padding: .5em;" class="text7">学习</span></div>
                     </div>
                             </div>
                                    
@@ -100,12 +100,16 @@
             
             var person = JSON.parse(localStorage.getItem("user"));
             
-            document.querySelector('.text1').innerHTML = person.username;
-            document.querySelector('.text2').innerHTML = person.psw;
-            document.querySelector('.text3').innerHTML = "男";
-            document.querySelector('.text4').innerHTML = "21";
-            document.querySelector('.text5').innerHTML = "1";
-            document.querySelector('.text6').innerHTML = "1";
+            for (var i=0; i < person.length; i++) {
+                document.querySelector('.text1').innerHTML = person[i].username;
+                document.querySelector('.text2').innerHTML = person[i].psw;
+                document.querySelector('.text3').innerHTML = "男";
+                document.querySelector('.text4').innerHTML = "21";
+                // document.querySelector('.text5').innerHTML = "1";
+                // document.querySelector('.text6').innerHTML = "1";
+            };
+            
+            
              
             
  
