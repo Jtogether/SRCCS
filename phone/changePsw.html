@@ -69,51 +69,61 @@
                 // console.log(usern)
                 // console.log(opsw)
                 // console.log(cpsw)
-                // console.log(infoFromLocalStorage)
+                // console.log(infoFromLocalStorage.length)
                 if (usern === '' || opsw === '' || cpsw === ''){
                     alert('空一个都别想改')
                 }else if (infoFromLocalStorage == null){
-                    alert('库中无记录该用户名，请先注册')
+                    alert('库中无数据，请先注册')
                 }else {
-                    if(usern === infoFromLocalStorage.username){
-                        if (opsw === cpsw){
-                            infoFromLocalStorage.psw = opsw;
-                            localStorage.setItem("user",JSON.stringify(infoFromLocalStorage))
-                            alert('修改成功！请用您的脑子记住你您的密码')
-                            appcan.window.open({
-                                name: "login",
-                                dataType:0,
-                                anild: 8,
-                                data: "login.html",
-                            });
-                        }else {
-                            alert('两次密码输入不正确')
+                    for (let i = 0;i < infoFromLocalStorage.length;i++){
+
+                        if (infoFromLocalStorage[i].username === usern){
+                            if (opsw === cpsw){
+                                infoFromLocalStorage[i].psw = opsw
+                                localStorage.setItem("user",JSON.stringify(infoFromLocalStorage))
+                                alert('修改成功!请用您的脑子记住您的密码')
+                                appcan.window.open({
+                                    name: "login",
+                                    dataType:0,
+                                    anild: 8,
+                                    data: "login.html",
+                                })
+                                return;
+                            }else {
+                                alert('两次密码输入不正确');
+                                return;
+                            }
                         }
-                    }else {
-                        alert('库内无该用户名，请再次确认您的用户名')
                     }
+                    alert('库中无该用户名，请确认您的用户名')
                 }
+
+
+
+                console.log(infoFromLocalStorage)
+                //     if (infoFromLocalStorage == null){
+                //     alert('库中无记录该用户名，请先注册')
+                // }else {
+                //     if(usern === infoFromLocalStorage.username){
+                //         if (opsw === cpsw){
+                //             infoFromLocalStorage.psw = opsw;
+                //             localStorage.setItem("user",JSON.stringify(infoFromLocalStorage))
+                //             alert('修改成功！请用您的脑子记住你您的密码')
+                //             appcan.window.open({
+                //                 name: "login",
+                //                 dataType:0,
+                //                 anild: 8,
+                //                 data: "login.html",
+                //             });
+                //         }else {
+                //             alert('两次密码输入不正确')
+                //         }
+                //     }else {
+                //         alert('库内无该用户名，请再次确认您的用户名')
+                //     }
+                // }
             }
-            
-            // function startChange() {
-            //     if(usern === infoFromLocalStorage.username){
-            //         if (opsw === cpsw){
-            //             infoFromLocalStorage.psw = opsw;
-            //             localStorage.setItem("user",JSON.stringify(infoFromLocalStorage))
-            //             alert('修改成功！请用您的脑子记住你您的密码')
-            //             appcan.window.open({
-            //                 name: "login",
-            //                 dataType:0,
-            //                 anild: 8,
-            //                 data: "login.html",
-            //             });
-            //         }else {
-            //             alert('两次密码输入不正确')
-            //         }
-            //     }else {
-            //         alert('库内无该用户名，请再次确认您的用户名')
-            //     }
-            // }
+
 
             function pushToRegister() {
                 appcan.window.open({
