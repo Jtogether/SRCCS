@@ -27,7 +27,6 @@ function checkUaP(){
             })
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
-        alert("登录成功！")
         }else {
             alert("账号或密码错误！");
         }
