@@ -97,12 +97,13 @@ setTimeout(autoplay,1000);
             "id": 7,
             "classname": 'icon-baoxiao',
             "text": '供应商月结'
-        },
-        {
-            "id": 8,
-            "classname": 'icon-sunyi ',
-            "text": '进项合同表'
-        },
+        }
+        // ,
+        // {
+        //     "id": 8,
+        //     "classname": 'icon-sunyi ',
+        //     "text": '进项合同表'
+        // },
     ]
 
     // let itemlist = document.querySelector('.main-content-itemlist')
