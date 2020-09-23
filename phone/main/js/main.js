@@ -132,6 +132,24 @@ setTimeout(autoplay,1000);
                 })
             }
                 break;
+            case 3:{
+                appcan.window.open({
+                    name: "CheckAppcalication",
+                    dataType:0,
+                    anild: 8,
+                    data: "CheckAppcalication.html",
+                })
+            }
+                break;
+            case 4:{
+                appcan.window.open({
+                    name: "CkeckAppcalication2.html",
+                    dataType:0,
+                    anild: 8,
+                    data: "CkeckAppcalication2.html",
+                })
+            }
+                break;
             case 5:{
                 localStorage.setItem("list_id","1")
                 appcan.window.open({
