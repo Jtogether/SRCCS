@@ -51,15 +51,15 @@
                     </div>
                     <div style="border-bottom:1px solid gray;height:3.5em;">
                     <div style="padding: .5em;">电话：</div>
-                    <div><span style="padding: .5em;" class"text5">13902871921</span></div>
+                    <div><span style="padding: .5em;" class="text5"></span></div>
                     </div>
                     <div style="border-bottom:1px solid gray;height:3.5em;">
                     <div style="padding: .5em;">住址：</div>
-                    <div><span style="padding: .5em;" class="text6">广州天河黄村</span></div>
+                    <div><span style="padding: .5em;" class="text6"></span></div>
                     </div>
                     <div style="border-bottom:1px solid gray;height:3.5em;">
                     <div style="padding: .5em;">爱好：</div>
-                    <div><span style="padding: .5em;" class="text7">学习</span></div>
+                    <div><span style="padding: .5em;" class="text7"></span></div>
                     </div>
                             </div>
                                    
@@ -99,15 +99,15 @@
             });   
             
             var person = JSON.parse(localStorage.getItem("user"));
+            var index = localStorage.getItem('userId');
             
-            for (var i=0; i < person.length; i++) {
-                document.querySelector('.text1').innerHTML = person[i].username;
-                document.querySelector('.text2').innerHTML = person[i].psw;
+                document.querySelector('.text1').innerHTML = person[index].username;
+                document.querySelector('.text2').innerHTML = person[index].psw;
                 document.querySelector('.text3').innerHTML = "男";
                 document.querySelector('.text4').innerHTML = "21";
-                // document.querySelector('.text5').innerHTML = "1";
-                // document.querySelector('.text6').innerHTML = "1";
-            };
+                document.querySelector('.text5').innerHTML = "13902871921";
+                document.querySelector('.text6').innerHTML = "广州天河黄村";
+                document.querySelector('.text7').innerHTML = "学习";
             
             
              

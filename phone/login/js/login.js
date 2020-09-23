@@ -14,6 +14,7 @@ function checkUaP(){
             //有这个账号
             flag=true;
             index=i;
+            localStorage.setItem('userId',index);
         }
     }
     if (flag) {

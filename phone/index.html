@@ -199,7 +199,8 @@
                 if(person == null){
                     document.querySelector('.userName').innerHTML = "未登录";
                 }else{
-                    document.querySelector('.userName').innerHTML = person[i].username;
+                    var index = localStorage.getItem('userId');
+                    document.querySelector('.userName').innerHTML = person[index].username;
                 }  
             };
               
