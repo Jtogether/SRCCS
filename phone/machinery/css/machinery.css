@@ -38,7 +38,8 @@ body{
             .addproject ul li{
                 margin: 3em 0 0 0 ;
                 font-size:1.2em;
-                margin-left: 1em
+                position: relative;
+                text-align: center;
              
                 
             }
@@ -48,8 +49,8 @@ body{
             }
                 .addproject ul li button{
                    width:8em;
-                   position:absolute;
-                   left:1em;
+                 
+                   text-align:center;
                    font-size: 2em;
                 }
                     #error1{
