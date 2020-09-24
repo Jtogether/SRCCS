@@ -59,13 +59,13 @@
             <span>税务费用</span></a>
             <a href="javascript:void(0)" id="trantsport" ><img src="img/car.png"/>
             <span>交通费用</span></a>
-            <a href=""><img src="img/house.png"/>
+            <a href="javascript:void(0)" id="vocational"><img src="img/house.png"/>
             <span>业务费用</span></a>
-            <a href=""><img src="img/food.png"/>
+            <a href="javascript:void(0)" id="food"><img src="img/food.png"/>
             <span>伙食费用</span></a>
-            <a href=""><img src="img/home1.png"/>
+            <a href="javascript:void(0)" id="home1"><img src="img/home1.png"/>
             <span>房租费用</span></a>
-            <a href=""><img src="img/material3.png"/>
+            <a href="javascript:void(0)" id="material3"><img src="img/material3.png"/>
             <span>杂物费用</span></a>
          
             
@@ -92,6 +92,7 @@
 		<script src="js/appcan.tab.js"></script>
 		<script src="js/appcan.treeview.js"></script>
         <script src="cost1/js/cost1.js"></script>
+        <script src="machinery/js/machinery.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
      <script>
     var swiper = new Swiper('.swiper-container', {
@@ -135,6 +136,36 @@
                     anild: 8
                 })
             });
+              $('#vocational').click(function(){
+                 appcan.window.open({
+                    name: "cash",
+                    data: " vocational work.html",
+                    anild: 8
+                })
+            });
+              $('#food').click(function(){
+                 appcan.window.open({
+                    name: "cash",
+                    data: "food.html",
+                    anild: 8
+                })
+            });
+              $('#home1').click(function(){
+                 appcan.window.open({
+                    name: "cash",
+                    data: "home1.html",
+                    anild: 8
+                })
+            });
+              $('#material3').click(function(){
+                 appcan.window.open({
+                    name: "cash",
+                    data: "material3.html",
+                    anild: 8
+                })
+            });
+             
+           
     </script>
     </body>
 </html>

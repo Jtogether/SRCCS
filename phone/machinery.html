@@ -17,7 +17,7 @@
         <div class="bc-bg" tabindex="0" data-control="PAGE" id="Page" style="background-color: white;">
             <div class="uh bc-head  ubb bc-border" data-control="HEADER" id="Header" >
                 <div class="ub">
-                    <div class="nav-btn" id="nav-left" >
+                    <div class="nav-btn" id="nav-left"  ">
                         <div class="ub-img1 icon-left ulev2">
                         </div>
                     </div>
@@ -29,78 +29,109 @@
                 </div>
             </div>
            <div class="nav" style="display: flex; justify-content: center;" >
-                <span id="" style="font-size: 1.25em;margin-top: 2.5em">
-                    <img src="img/material.png" width="200px"height="200px" />机械费用
+                <span id="" style="font-size: 1.25em;margin-top: 3em">
+                    <img src="img/nav.png" width="200px"height="200px" />机械费用
                         
                     
                 </span>
             </div>
             <form action="" method=""  >
         <div class="addproject" style="background-color: white;">
-    <ul style="text-align: center;">
-        <li>材料名称：<input type="text" id="username" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
-        <li class="active">购买时间：<input type="text"id="equipment" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" />      </li>
-        <li class="begintime">购买产量：<input type="text" id="begintime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
-        <li>应付金额：<input type="text" id="endtime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
-        <li>总计费用：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /></li>
-       
+    <ul style="">
+        <li>材料名称：<input type="text" id="username" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+            <span id="error1" style="right: 1em">
+              
+           </span>
+        </li>
+        <li class="active">购买时间：<input type="text"id="equipment" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+            <span id="error2" >
+               
+           </span>  
+                </li>
+        <li class="begintime">购买产量：<input type="text" id="begintime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+            <span id="error3">
+               
+           </span>
+        </li>
+        <li>应付金额：<input type="text" id="endtime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+            <span id="error4">
+               
+           </span>
+        </li>
+        <li>已付金额：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+            <span id="error5">
+               
+           </span>
+        </li>
+        <li><button class="btn btn-info" style="">提交</button></li>
+      
+        
     </ul>    
         </div>
 
-            </form> 
-            <div id="" style="padding-top:1em;float: right">
-                 <button class="btn btn-info"onclick="run()" style="font-size: 1.5em;">提交</button>
-            </div>
+            </form>
+          
         </div>
+        
         <script src="js/appcan.js"></script>
         <script src="js/appcan.control.js"></script>
         <script src="js/appcan.scrollbox.js"></script>
         <script src="js/template.import.js"></script>
-		<script src="js/appcan.listview.js"></script>
-		<script src="js/appcan.optionList.js"></script>
-		<script src="js/appcan.slider.js"></script>
-		<script src="js/appcan.tab.js"></script>
-		<script src="js/appcan.treeview.js"></script>
+        <script src="js/appcan.listview.js"></script>
+        <script src="js/appcan.optionList.js"></script>
+        <script src="js/appcan.slider.js"></script>
+        <script src="js/appcan.tab.js"></script>
+        <script src="js/appcan.treeview.js"></script>
         <script src="machinery/js/machinery.js"></script>
     </body>
-       <script src="machinery/js/machinery.js"></script>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
-
     <script type="text/javascript">
         $("button").click(function(){   
         console.log($("form").serialize());
 
         })      
     </script>
-    <script type="text/javascript">
-        function run(){
-            var name = document.getElementById('username').value;
-            var eq = document.getElementById('equipment').value;
-            var bt = document.getElementById('begintime').value;
-            var et = document.getElementById('endtime').value;
-            var tt = document.getElementById('total').value;
-            if(name.length<=0){
-                alert("请输入材料名称");
+  <script type="text/javascript">
+        $('#username').blur(function(){
+            var username= $(this).val();
+            if(username==""){
+                $("#error1").html("请输入保安服务费");
                 return false;
             }
-            if(eq.length<=0){
-                alert("请输入购买时间");
+           
+        })
+          $('#equipment').blur(function(){
+            var username= $(this).val();
+            if(username==""){
+                $("#error2").html("请输入材料名称");
                 return false;
             }
-            if(bt.length<=0){
-                alert("请输入购买产量");
+           
+        })
+            $('#begintime').blur(function(){
+            var username= $(this).val();
+            if(username==""){
+                $("#error3").html("请输入购买时间");
                 return false;
             }
-            if(et.length<=0){
-                alert("请输入应付金额");
+           
+        })
+            $('#endtime').blur(function(){
+            var username= $(this).val();
+            if(username==""){
+                $("#error4").html("请输入购买产量");
                 return false;
             }
-            if(tt.length<=0){
-                alert("请输入总共金额");
+           
+        })
+            $('#total').blur(function(){
+            var username= $(this).val();
+            if(username==""){
+                $("#error5").html("请输入总共金额");
                 return false;
             }
-        }
- 
+           
+        })
+        
+        
     </script>
-
-</html>

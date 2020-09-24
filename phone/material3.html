@@ -21,7 +21,7 @@
                         <div class="ub-img1 icon-left ulev2">
                         </div>
                     </div>
-                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">税务费用</h1>
+                    <h1 class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">杂物费用</h1>
                     <div class="nav-btn" id="nav-right">
                         <div class="fa  fa-1g  ub-img1">
                         </div>
@@ -30,7 +30,7 @@
             </div>
            <div class="nav" style="display: flex; justify-content: center;" >
                 <span id="" style="font-size: 1.25em;margin-top: 3em">
-                    <img src="img/tax.png" width="200px"height="200px" />税务费用
+                    <img src="img/material3.png" width="200px"height="200px" />杂物费用
                         
                     
                 </span>
@@ -38,27 +38,27 @@
             <form action="" method=""  >
         <div class="addproject" style="background-color: white;">
     <ul style="">
-        <li>材料税务：<input type="text" id="username" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+        <li>杂物序号：<input type="text" id="username" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
             <span id="error1" style="right: 1em">
               
            </span>
         </li>
-        <li class="active">工资税务：<input type="text"id="equipment" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+        <li class="active">购买日期：<input type="text"id="equipment" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
             <span id="error2" >
                
            </span>  
                 </li>
-        <li class="begintime">社保税务：<input type="text" id="begintime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+        <li class="begintime">杂物明细：<input type="text" id="begintime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
             <span id="error3">
                
            </span>
         </li>
-        <li>统计时间：<input type="text" id="endtime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+        <li>总共金额：<input type="text" id="endtime"style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
             <span id="error4">
                
            </span>
         </li>
-        <li>总计费用：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+        <li>备注：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
             <span id="error5">
                
            </span>
@@ -95,7 +95,7 @@
         $('#username').blur(function(){
             var username= $(this).val();
             if(username==""){
-                $("#error1").html("请输入材料税");
+                $("#error1").html("请输入杂物序号");
                 return false;
             }
            
@@ -103,7 +103,7 @@
           $('#equipment').blur(function(){
             var username= $(this).val();
             if(username==""){
-                $("#error2").html("请输入工资税");
+                $("#error2").html("请输入购买日期");
                 return false;
             }
            
@@ -111,7 +111,7 @@
             $('#begintime').blur(function(){
             var username= $(this).val();
             if(username==""){
-                $("#error3").html("请输入社保税务");
+                $("#error3").html("请输入杂物明细");
                 return false;
             }
            
@@ -119,7 +119,7 @@
             $('#endtime').blur(function(){
             var username= $(this).val();
             if(username==""){
-                $("#error4").html("请输入统计时间");
+                $("#error4").html("请输入总共金额");
                 return false;
             }
            
@@ -127,7 +127,7 @@
             $('#total').blur(function(){
             var username= $(this).val();
             if(username==""){
-                $("#error5").html("请输入总共金额");
+                $("#error5").html("请输入备注);
                 return false;
             }
            
