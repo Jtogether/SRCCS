@@ -44,43 +44,44 @@ body{
                 
             }
             .addproject ul li input{
-                font-size: 1em;
+                font-size:1.56em;
+                margin-top: 0.65em;
          
             }
                 .addproject ul li button{
                    width:8em;
                  
                    text-align:center;
-                   font-size: 2em;
+                   font-size: 3.3em;
                 }
-                    #error1{
-                    position:absolute;
-                    font-size: 0.7em;
+                 #error1{
+                     position:absolute;
+                    font-size: 0.8em;
                     color: red;
-                    right: 1em
+                   left: 33em;
                   
                 }
                 #error2{
-                         position:absolute;
-                    font-size: 0.7em;
+                    position:absolute;
+                    font-size: 0.8em;
                     color: red;
-                    right: 1em
+                   left: 33em;
                 }
                 #error3{
-                         position:absolute;
-                    font-size: 0.7em;
+                       position:absolute;
+                    font-size: 0.8em;
                     color: red;
-                   right: 1em
+                   left: 33em;
                 }
                 #error4{
                          position:absolute;
-                    font-size: 0.7em;
+                    font-size: 0.8em;
                     color: red;
-                    right: 1em
+                   left: 33em;
                 }
                 #error5{
-                         position:absolute;
-                    font-size: 0.7em;
+                        position:absolute;
+                    font-size: 0.8em;
                     color: red;
-                    right: 1em
+                   left: 33em;
                 }

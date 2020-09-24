@@ -39,7 +39,7 @@
         <div class="addproject" style="background-color: white;">
     <ul style="">
         <li>杂物序号：<input type="text" id="username" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
-            <span id="error1" style="right: 1em">
+            <span id="error1" >
               
            </span>
         </li>
@@ -58,7 +58,7 @@
                
            </span>
         </li>
-        <li>备注：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
+        <li>备注信息：<input type="text"id="total" style="border: 0;outline: 0;border-bottom: 1px solid #000000;" /><br/>
             <span id="error5">
                
            </span>
@@ -127,7 +127,7 @@
             $('#total').blur(function(){
             var username= $(this).val();
             if(username==""){
-                $("#error5").html("请输入备注);
+                $("#error5").html("请输入备注信息");
                 return false;
             }
            
