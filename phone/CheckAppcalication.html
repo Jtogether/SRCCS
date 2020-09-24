@@ -76,5 +76,15 @@
 		<script src="js/appcan.tab.js"></script>
 		<script src="js/appcan.treeview.js"></script>
         <script src="CheckAppcalication/js/CheckAppcalication.js"></script>
+
+        <script>
+            let checkBtn = document.querySelectorAll('.btn')
+            for (let i = 0; i <checkBtn.length;i++){
+                checkBtn[i].onclick = function () {
+                    checkBtn[i].className = 'btn btn-success'
+                    checkBtn[i].innerHTML = '已审核'
+                }
+            }
+        </script>
     </body>
 </html>
